@@ -1,0 +1,22 @@
+version: "3"
+services:
+  how2sign-ts-search:
+    image: "php:8.1.16-apache"
+    container_name: how2sign-ts-search
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - 8080:80
+  pgsql:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: how2sign-pgsql
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=public
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
