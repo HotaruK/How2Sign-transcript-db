@@ -1,7 +1,9 @@
 version: "3"
 services:
   how2sign-ts-search:
-    image: "php:8.1.16-apache"
+    build:
+      context: ./app
+      dockerfile: Dockerfile
     container_name: how2sign-ts-search
     volumes:
       - ./app:/var/www/html
