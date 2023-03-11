@@ -9,6 +9,7 @@ services:
       - ./app:/var/www/html
     ports:
       - 8080:80
+    command: bash -c "composer install && docker-php-entrypoint apache2-foreground"
   pgsql:
     build:
       context: ./db

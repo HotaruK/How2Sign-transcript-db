@@ -139,7 +139,7 @@ $rsm->addScalarResult("SENTENCE", "sentence");
 
 foreach ($chooseTable as $tableName) {
     $parameters = array();
-    $sql = "SELECT * FROM \"" . strtoupper($tableName) . "\"";
+    $sql = "SELECT * FROM \"" . $tableName . "\"";
     if (count($keywords) != 0) {
         $sql .= " WHERE ";
         $conditions = [];

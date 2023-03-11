@@ -10,4 +10,3 @@ ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/mas
 RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions pdo_pgsql
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install
