@@ -14,3 +14,6 @@ $ cd /How2Sign-transcript-db
 $ docker-compose up
 ```
 and then http://localhost:8080
+
+## Execute SQL
+`docker exec -it how2sign-pgsql psql -U root -d public`
